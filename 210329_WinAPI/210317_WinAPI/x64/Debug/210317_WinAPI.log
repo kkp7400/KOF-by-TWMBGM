@@ -1,0 +1,10 @@
+﻿  Mai.cpp
+C:\Users\USER\Documents\카카오톡 받은 파일\210329_WinAPI\210329_WinAPI\210317_WinAPI\Mai.cpp(150,35): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\USER\Documents\카카오톡 받은 파일\210329_WinAPI\210329_WinAPI\210317_WinAPI\Mai.cpp(150,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\USER\Documents\카카오톡 받은 파일\210329_WinAPI\210329_WinAPI\210317_WinAPI\Mai.cpp(153,41): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\USER\Documents\카카오톡 받은 파일\210329_WinAPI\210329_WinAPI\210317_WinAPI\Mai.cpp(153,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\USER\Documents\카카오톡 받은 파일\210329_WinAPI\210329_WinAPI\210317_WinAPI\Mai.cpp(156,40): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\USER\Documents\카카오톡 받은 파일\210329_WinAPI\210329_WinAPI\210317_WinAPI\Mai.cpp(156,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\USER\Documents\카카오톡 받은 파일\210329_WinAPI\210329_WinAPI\210317_WinAPI\Mai.cpp(159,49): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\USER\Documents\카카오톡 받은 파일\210329_WinAPI\210329_WinAPI\210317_WinAPI\Mai.cpp(159,42): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  210317_WinAPI.vcxproj -> C:\Users\USER\Documents\카카오톡 받은 파일\210329_WinAPI\210329_WinAPI\x64\Debug\210317_WinAPI.exe
