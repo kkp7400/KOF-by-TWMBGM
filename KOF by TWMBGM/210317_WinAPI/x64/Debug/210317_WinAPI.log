@@ -1,0 +1,22 @@
+﻿  Mai.cpp
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(57,6): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(63,6): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(69,6): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(75,6): warning C4244: '인수': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(196,35): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(196,28): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(199,41): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(199,34): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(202,40): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(202,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(205,54): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(205,44): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(208,53): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(208,42): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(211,54): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(211,44): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(214,52): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(214,42): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(217,43): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Download\KOF by TWMBGM\210317_WinAPI\Mai.cpp(217,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  210317_WinAPI.vcxproj -> D:\Download\KOF by TWMBGM\x64\Debug\KOF by TWMBGM.exe
