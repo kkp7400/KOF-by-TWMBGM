@@ -16,11 +16,11 @@
     <Filter Include="MainGame">
       <UniqueIdentifier>{9b6509d8-d274-40de-bfa6-46770a9d6478}</UniqueIdentifier>
     </Filter>
-    <Filter Include="2D Framework">
-      <UniqueIdentifier>{d1adb92e-8df5-486f-a55d-12d4c86836b7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="MainGame\KOF_Caracter">
       <UniqueIdentifier>{446ee887-fa6f-4eb5-8420-cb74c82bfd85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MainGame\2D Framework">
+      <UniqueIdentifier>{d1adb92e-8df5-486f-a55d-12d4c86836b7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -40,13 +40,13 @@
       <Filter>MainGame</Filter>
     </ClCompile>
     <ClCompile Include="GameNode.cpp">
-      <Filter>2D Framework</Filter>
+      <Filter>MainGame\2D Framework</Filter>
     </ClCompile>
     <ClCompile Include="KeyManager.cpp">
-      <Filter>2D Framework</Filter>
+      <Filter>MainGame\2D Framework</Filter>
     </ClCompile>
     <ClCompile Include="Image.cpp">
-      <Filter>2D Framework</Filter>
+      <Filter>MainGame\2D Framework</Filter>
     </ClCompile>
     <ClCompile Include="Iori.cpp">
       <Filter>MainGame\KOF_Caracter</Filter>
@@ -78,16 +78,16 @@
       <Filter>MainGame</Filter>
     </ClInclude>
     <ClInclude Include="GameNode.h">
-      <Filter>2D Framework</Filter>
+      <Filter>MainGame\2D Framework</Filter>
     </ClInclude>
     <ClInclude Include="KeyManager.h">
-      <Filter>2D Framework</Filter>
+      <Filter>MainGame\2D Framework</Filter>
     </ClInclude>
     <ClInclude Include="Singleton.h">
-      <Filter>2D Framework</Filter>
+      <Filter>MainGame\2D Framework</Filter>
     </ClInclude>
     <ClInclude Include="Image.h">
-      <Filter>2D Framework</Filter>
+      <Filter>MainGame\2D Framework</Filter>
     </ClInclude>
     <ClInclude Include="Iori.h">
       <Filter>MainGame\KOF_Caracter</Filter>

@@ -22,6 +22,9 @@ private:
 	int countCommand;
 	bool canState;
 	bool isCommand;
+	RECT hitCol;
+	//RECT hitColDown;
+	RECT atkCol;
 	enum State
 	{
 		Idle,
@@ -45,5 +48,8 @@ public:
 
 	void Move();
 	void Attack();
+	void UpdateHitCol();
+	void UpdateAtkCol();
+	
 };
 

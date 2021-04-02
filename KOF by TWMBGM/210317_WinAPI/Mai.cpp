@@ -22,6 +22,16 @@ HRESULT Mai::Init()
 	pos.x = WINSIZE_X - 800;
 	pos.y = WINSIZE_Y - 500;
 	state = Idle;
+	hitCol.left = (pos.x - 55) + 195;
+	hitCol.right = (pos.x + 55) + 195;
+	hitCol.top = (pos.y - 200) + 280;
+	hitCol.bottom = (pos.y + 80) + 280;
+
+	atkCol.left = 0;
+	atkCol.right = 0;
+	atkCol.top = 0;
+	atkCol.bottom = 0;
+	#pragma region imageInit
 	canState = TRUE;
 	command[0] = '0';
 	command[1] = '0';
@@ -30,9 +40,9 @@ HRESULT Mai::Init()
 	commandTime = 0;
 	cinCommand = '0';
 	countCommand = 0;
-	#pragma endregion
+
 	//±âº»
-	#pragma region imageInit
+	
 	img_Idle = new Image();
 	if (FAILED(img_Idle->Init("Image/Mai/Mai_Idle.bmp", 6400, 400, 16, 1, true, RGB(255, 255, 255))))
 	{
@@ -85,6 +95,83 @@ HRESULT Mai::Init()
 	}
 #pragma endregion
 	return S_OK;
+}
+void Mai::UpdateHitCol()
+{
+	switch (state)
+	{
+	case Mai::Idle:
+		hitCol.left = (pos.x - 55) + 195;
+		hitCol.right = (pos.x + 55) + 195;
+		hitCol.top = (pos.y - 200) + 280;
+		hitCol.bottom = (pos.y + 80) + 280;
+		break;
+	case Mai::Front:
+		hitCol.left = (pos.x - 55) + 150;
+		hitCol.right = (pos.x + 55) + 150;
+		hitCol.top = (pos.y - 200) + 280;
+		hitCol.bottom = (pos.y + 80) + 280;
+		break;
+	case Mai::Back:
+		hitCol.left = (pos.x - 55) + 215;
+		hitCol.right = (pos.x + 55) + 215;
+		hitCol.top = (pos.y - 200) + 280;
+		hitCol.bottom = (pos.y + 80) + 280;
+		break;
+	}
+	
+}
+void Mai::UpdateAtkCol()
+{
+	switch (state)
+	{
+	case Mai::Foot_Strong_Attack:
+		hitCol.left = (pos.x - 55) + 195;
+		hitCol.right = (pos.x + 55) + 195;
+		hitCol.top = (pos.y - 200) + 280;
+		hitCol.bottom = (pos.y + 80) + 280;
+
+		atkCol.left = (pos.x - 155) + 100;
+		atkCol.right = (pos.x + 55) + 100;
+		atkCol.top = (pos.y - 60) + 100;
+		atkCol.bottom = (pos.y + 50) + 100;
+		break;
+	case Mai::Foot_Weak_Attack:
+		hitCol.left = (pos.x - 55) + 195;
+		hitCol.right = (pos.x + 55) + 195;
+		hitCol.top = (pos.y - 200) + 280;
+		hitCol.bottom = (pos.y + 80) + 280;
+
+		atkCol.left = (pos.x - 175) + 100;
+		atkCol.right = (pos.x + 55) + 100;
+		atkCol.top = (pos.y - 50) + 100;
+		atkCol.bottom = (pos.y + 50) + 100;
+		break;
+	case Mai::Fist_Strong_Attack:
+		hitCol.left = (pos.x - 90) + 195;
+		hitCol.right = (pos.x + 15) + 195;
+		hitCol.top = (pos.y - 200) + 280;
+		hitCol.bottom = (pos.y + 80) + 280;
+
+		atkCol.left = (pos.x - 150) + 100;
+		atkCol.right = (pos.x + 55) + 100;
+		atkCol.top = (pos.y - 120) + 100;
+		atkCol.bottom = (pos.y + 30) + 100;
+		break;
+	case Mai::Fist_Weak_Attack:
+		hitCol.left = (pos.x - 75) + 195;
+		hitCol.right = (pos.x + 55) + 195;
+		hitCol.top = (pos.y - 200) + 280;
+		hitCol.bottom = (pos.y + 80) + 280;
+
+		atkCol.left = (pos.x - 175) + 100;
+		atkCol.right = (pos.x + 55) + 100;
+		atkCol.top = (pos.y - 10) + 100;
+		atkCol.bottom = (pos.y + 50) + 100;
+		break;
+	case Mai::Skill_1:
+		break;
+	}
 }
 
 void Mai::Release()
@@ -161,6 +248,7 @@ void Mai::Update()
 			{
 				canState = TRUE;
 				state = Idle;
+				UpdateHitCol();
 				maxFrame = 16;
 			}
 			frame = 0;
@@ -193,24 +281,35 @@ void Mai::Render(HDC hdc)
 	switch (state)
 	{		
 	case Mai::Idle:
-		img_Idle->Render(hdc, pos.x, pos.y, frame);
+		Rectangle(hdc, hitCol.left, hitCol.top, hitCol.right, hitCol.bottom);		
+		img_Idle->Render(hdc, pos.x, pos.y, frame);		
 		break;
 	case Mai::Front:
+		Rectangle(hdc, hitCol.left, hitCol.top, hitCol.right, hitCol.bottom);
 		img_Front_walk->Render(hdc, pos.x, pos.y, frame);
 		break;
 	case Mai::Back:
+		Rectangle(hdc, hitCol.left, hitCol.top, hitCol.right, hitCol.bottom);
 		img_Back_walk->Render(hdc, pos.x, pos.y, frame);
 		break;
 	case Mai::Foot_Strong_Attack:
+		Rectangle(hdc, hitCol.left, hitCol.top, hitCol.right, hitCol.bottom);
+		Rectangle(hdc, atkCol.left, atkCol.top, atkCol.right, atkCol.bottom);
 		img_foot_Strong_Attack->Render(hdc, pos.x-60, pos.y-125, frame);
 		break;
 	case Mai::Foot_Weak_Attack:
+		Rectangle(hdc, hitCol.left, hitCol.top, hitCol.right, hitCol.bottom);
+		Rectangle(hdc, atkCol.left, atkCol.top, atkCol.right, atkCol.bottom);
 		img_foot_Weak_Attack->Render(hdc, pos.x-150, pos.y-20, frame);
 		break;		
 	case Mai::Fist_Strong_Attack:
+		Rectangle(hdc, hitCol.left, hitCol.top, hitCol.right, hitCol.bottom);
+		Rectangle(hdc, atkCol.left, atkCol.top, atkCol.right, atkCol.bottom);
 		img_fist_Strong_Attack->Render(hdc, pos.x-65, pos.y-48, frame);
 		break;
 	case Mai::Fist_Weak_Attack:
+		Rectangle(hdc, hitCol.left, hitCol.top, hitCol.right, hitCol.bottom);
+		Rectangle(hdc, atkCol.left, atkCol.top, atkCol.right, atkCol.bottom);
 		img_fist_Weak_Attack->Render(hdc, pos.x-90, pos.y+30, frame);
 		break;
 	case Mai::Skill_1:
@@ -224,6 +323,7 @@ void Mai::Move()
 	if (KeyManager::GetSingleton()->IsStayKeyDown('B') && canState == TRUE)
 	{
 		state = Front;
+		UpdateHitCol();
 		maxFrame = 10;
 		pos.x -= 2;
 		canState = TRUE;
@@ -232,6 +332,7 @@ void Mai::Move()
 	if (KeyManager::GetSingleton()->IsOnceKeyUp('B') && canState == TRUE)
 	{
 		state = Idle;
+		UpdateHitCol();
 		maxFrame = 16;
 		canState = TRUE;
 		countCommand++;
@@ -244,8 +345,6 @@ void Mai::Move()
 		else
 		{
 			if (countCommand == 3)
-				std::cout << "µé¾î¿È" << endl;
-
 			command[countCommand - 1] = 'B';
 			commandTime = 0;
 		}
@@ -255,6 +354,7 @@ void Mai::Move()
 	if (KeyManager::GetSingleton()->IsStayKeyDown('M') && canState == TRUE)
 	{
 		state = Back;
+		UpdateHitCol();
 		maxFrame = 10;
 		pos.x += 2;
 		canState = TRUE;
@@ -263,6 +363,7 @@ void Mai::Move()
 	if (KeyManager::GetSingleton()->IsOnceKeyUp('M') && canState == TRUE)
 	{
 		state = Idle;
+		UpdateHitCol();
 		maxFrame = 16;
 		canState = TRUE;
 		countCommand++;
@@ -287,6 +388,8 @@ void Mai::Attack()
 	{
 		frame = 0;
 		state = Foot_Strong_Attack;
+		UpdateHitCol();
+		UpdateAtkCol();
 		maxFrame = 11;
 		canState = FALSE;
 
@@ -297,6 +400,8 @@ void Mai::Attack()
 	{
 		frame = 0;
 		state = Foot_Weak_Attack;
+		UpdateHitCol();
+		UpdateAtkCol();
 		maxFrame = 14;
 		canState = FALSE;
 
@@ -330,6 +435,8 @@ void Mai::Attack()
 		{
 			frame = 0;
 			state = Fist_Strong_Attack;
+			UpdateHitCol();
+			UpdateAtkCol();
 			maxFrame = 10;
 			canState = FALSE;
 		}
@@ -339,6 +446,8 @@ void Mai::Attack()
 	{
 		frame = 0;
 		state = Fist_Weak_Attack;
+		UpdateHitCol();
+		UpdateAtkCol();
 		maxFrame = 6;
 		canState = FALSE;
 
