@@ -12,8 +12,8 @@
 
 using namespace std;
 
-#define WINSIZE_X	1080
-#define WINSIZE_Y	720
+#define WINSIZE_X	1600
+#define WINSIZE_Y	900
 
 typedef struct tagFPoint
 {
