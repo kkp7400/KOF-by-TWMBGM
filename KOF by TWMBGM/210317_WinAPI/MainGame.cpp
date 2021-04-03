@@ -226,12 +226,6 @@ void MainGame::CheckCollision()
 			}
 		}
 	}
-
-	// 利 <-> 攀农
-
-	// 利 固荤老 <-> 攀农
-
-	// 利 固荤老 <-> 攀农 固荤老
 }
 
 LRESULT MainGame::MainProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)

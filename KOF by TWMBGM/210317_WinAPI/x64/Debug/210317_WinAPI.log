@@ -67,4 +67,11 @@ C:\Users\현상\Desktop\Programming_27\KOF-by-TWMBGM\KOF by TWMBGM\210317_WinAPI
 C:\Users\현상\Desktop\Programming_27\KOF-by-TWMBGM\KOF by TWMBGM\210317_WinAPI\Mai.cpp(313,42): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\현상\Desktop\Programming_27\KOF-by-TWMBGM\KOF by TWMBGM\210317_WinAPI\Mai.cpp(316,43): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 C:\Users\현상\Desktop\Programming_27\KOF-by-TWMBGM\KOF by TWMBGM\210317_WinAPI\Mai.cpp(316,33): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MainGame.cpp
+C:\Users\현상\Desktop\Programming_27\KOF-by-TWMBGM\KOF by TWMBGM\210317_WinAPI\MainGame.cpp(43,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\현상\Desktop\Programming_27\KOF-by-TWMBGM\KOF by TWMBGM\210317_WinAPI\MainGame.cpp(52,22): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\현상\Desktop\Programming_27\KOF-by-TWMBGM\KOF by TWMBGM\210317_WinAPI\MainGame.cpp(53,22): warning C4244: '=': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\현상\Desktop\Programming_27\KOF-by-TWMBGM\KOF by TWMBGM\210317_WinAPI\MainGame.cpp(164,79): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\현상\Desktop\Programming_27\KOF-by-TWMBGM\KOF by TWMBGM\210317_WinAPI\MainGame.cpp(167,50): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
   210317_WinAPI.vcxproj -> C:\Users\현상\Desktop\Programming_27\KOF-by-TWMBGM\KOF by TWMBGM\x64\Debug\KOF by TWMBGM.exe

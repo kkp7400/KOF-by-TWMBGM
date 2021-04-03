@@ -266,7 +266,7 @@ void Mai::Update()
 	commandTime++;
 	if (commandTime > 1000 || countCommand >= 4)
 	{
-		ResetCommand('0');
+		ResetCommand();
 		std::cout << "들어옴" << endl;
 	}	
 	for (int i = 0; i < 4; i++)
@@ -332,21 +332,28 @@ void Mai::Move()
 	if (KeyManager::GetSingleton()->IsOnceKeyUp('B') && canState == TRUE)
 	{
 		state = Idle;
-		UpdateHitCol();
+		UpdateHitCol();//제 커맨드는 BMBW
 		maxFrame = 16;
 		canState = TRUE;
-		countCommand++;
+		countCommand++;//카운트 커맨드 +1
 		cinCommand = 'B';
 
 		if (countCommand != 1 && countCommand != 3)
 		{
-			ResetCommand('B');
+			ResetCommand();
 		}
 		else
 		{
+			if (countCommand == 1)
+			{
+				command[countCommand - 1] = 'B';
+				commandTime = 0;
+			}
 			if (countCommand == 3)
-			command[countCommand - 1] = 'B';
-			commandTime = 0;
+			{
+				command[countCommand - 1] = 'B';
+				commandTime = 0;
+			}
 		}
 	}
 
@@ -371,7 +378,7 @@ void Mai::Move()
 
 		if (countCommand != 2)
 		{
-			ResetCommand('M');
+			ResetCommand();
 		}
 		else
 		{
@@ -410,11 +417,11 @@ void Mai::Attack()
 
 	if (KeyManager::GetSingleton()->IsOnceKeyDown('W') && canState == TRUE)
 	{
-		countCommand++;
+		countCommand++;// 제대로 왔을 경우 현재 4
 
 		if (countCommand != 4)
 		{
-			ResetCommand('W');
+			ResetCommand();
 		}
 		else
 		{
@@ -454,9 +461,9 @@ void Mai::Attack()
 	}
 }
 // 커맨드 오입력 시 초기화 카운트 현재 커맨드의 최대 카운트를 4로 해놓아서 4개의 값만 받습니다. 추가 시 해당 부분도 변경해주세요.
-void Mai::ResetCommand(char lastCharacter)
+void Mai::ResetCommand()
 {
-	command[0] = lastCharacter;
+	command[0] = '0';
 	command[1] = '0';
 	command[2] = '0';
 	command[3] = '0';
